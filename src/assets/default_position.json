@@ -1,0 +1,28 @@
+{
+    "Distance Sensor 1": {
+        "dictName": "Distance Sensor 1",
+        "name": "Distance Sensor",
+        "customName": "distance_sensor1",
+        "type": "",
+        "x": -237,
+        "y": 65,
+        "z": -370,
+        "rx": 0,
+        "ry": 1,
+        "rz": 0,
+        "a": 1.57
+    },
+    "Distance Sensor 2": {
+        "dictName": "Distance Sensor 2",
+        "name": "Distance Sensor",
+        "customName": "distance_sensor2",
+        "type": "",
+        "x": 237,
+        "y": 65,
+        "z": -370,
+        "rx": 0,
+        "ry": 1,
+        "rz": 0,
+        "a": 1.57
+    }
+}
