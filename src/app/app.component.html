@@ -1,0 +1,54 @@
+
+<body>
+  <table>
+    <tr><br></tr>
+    <tr id='bottomRow'>
+      <td id='info' colspan="4">
+        <div style="text-align: center;">
+          <img src="/assets/images/roboliga.png" style="height: 50px;"/>
+          <h1 style="margin-bottom: 5px;">
+            Customización de Robot para Erebus 2021
+          </h1>
+          <span>Ver. 21.2.4</span>
+        </div>
+        
+        <div id="threeCanvas">
+          <div #three></div>
+        </div>
+        <div id="file">
+          <label>Nombre del archivo: </label>
+          <input #fileNameInput class="input" value="{{fileName}}">
+          <button mat-raised-button color="primary" (click)="export_to_json()">Exportar a Json</button>
+          <!-- <br>
+          <br> -->
+          <!-- <label>Share Code: </label> -->
+          <!-- <input #shareCodeOutput class="input" value="{{shareCode}}"> -->
+          <!-- <button mat-raised-button color="primary" (click)="shareCodeToClip()">Copy Share Code to Clipboard</button> -->
+          <br>
+          <br>
+          <!-- <label>Import via json: </label> -->
+          <!-- <input #shareCodeInput class="input" value=""> -->
+          <button mat-raised-button color="primary" (click)="jsonInput.click()">Importar desde Json</button>
+          <input hidden (change)="jsonSelected($event)" #jsonInput type="file" id="file">
+        </div>
+        <br>
+      </td>
+      <td colspan="2">
+        <h2>Sensores:</h2>
+        <div *ngFor="let item of components">
+          <app-component-checkbox [import]=checkboxImport[item.dictName] [values]=checkboxValues[item.dictName] [customName]="item.defaultName" [dictName]="item.dictName" [type]="item.type" [cost]="item.cost" [name]="item.name" [totalCost]="cost" [budget]="budget" (outputCost)="checkBoxChecked($event)" (component)="addSelectedComponent($event)"></app-component-checkbox>
+        </div>
+        <br>
+
+        <h3>Sensores de distancia: </h3>
+        <label>Numero de sensores de distancia</label><mat-slider type="range" max="2" min="0" value="{{numberOfDists}}" (input)="onDistSliderChange($event)"> </mat-slider>
+        <br>
+        <br>
+        <div *ngFor="let dist of distsIterator; let j = index">
+          <app-component-slider [values]=distanceSensorValues[j] [zxmax]=370 [name]="'Distance Sensor'" [number]="j + 1" (component)="addSelectedComponent($event)"></app-component-slider>
+        </div>
+      
+    </tr>
+  </table>
+  
+</body>
