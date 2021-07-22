@@ -139,13 +139,13 @@ export class AppComponent implements AfterViewInit {
       
 
 
-      body.gltfloader = new GLTFLoader();
-      body.gltfloader.load("./../assets/models/pretyrobot.gltf", function(gltf){
-        var model = gltf.scene
-        model.position.set(0, 0, 0)
-        model.scale.set(10, 10, 10)
-        body.scene.add(model);
-      });
+      // body.gltfloader = new GLTFLoader();
+      // body.gltfloader.load("./../assets/models/pretyrobot.gltf", function(gltf){
+      //   var model = gltf.scene
+      //   model.position.set(0, 0, 0)
+      //   model.scale.set(10, 10, 10)
+      //   body.scene.add(model);
+      // });
       
       
 
