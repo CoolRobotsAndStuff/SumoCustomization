@@ -31,7 +31,7 @@ export class CheckBoxComponent {
     check = new Subject<CheckBoxComponent>();
 
     checked: boolean = true;
-    disabled: boolean = true;
+    disabled: boolean = false;
     collapsed = false;
 
     x: number = 0.0;
@@ -46,9 +46,9 @@ export class CheckBoxComponent {
     max: number = 370;
 
     disable(){
-        this.checked = false;
+        this.checked = true;
         if (this.expPanel != undefined){
-            this.expPanel.close();
+            this.expPanel.open();
         }
     }
 

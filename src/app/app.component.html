@@ -6,10 +6,9 @@
       <td id='info' colspan="4">
         <div style="text-align: center;">
           <img src="./assets/images/roboliga.png" style="height: 50px;"/>
-          <h1 style="margin-bottom: 5px;">
-            Customización de Robot para Erebus 2021
+          <h1 style="margin-bottom: 5px;text-align: left;">
+          Personalización de Robot para Sumo Virtual
           </h1>
-          <span>Ver. 21.2.4</span>
         </div>
         
         <div id="threeCanvas">
@@ -41,9 +40,6 @@
         <br>
 
         <h3>Sensores de distancia: </h3>
-        <label>Numero de sensores de distancia</label><mat-slider type="range" max="2" min="0" value="{{numberOfDists}}" (input)="onDistSliderChange($event)"> </mat-slider>
-        <br>
-        <br>
         <div *ngFor="let dist of distsIterator; let j = index">
           <app-component-slider [values]=distanceSensorValues[j] [zxmax]=370 [name]="'Distance Sensor'" [number]="j + 1" (component)="addSelectedComponent($event)"></app-component-slider>
         </div>

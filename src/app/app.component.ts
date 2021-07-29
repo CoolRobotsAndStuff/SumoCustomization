@@ -60,7 +60,7 @@ export class AppComponent implements AfterViewInit {
   loader: VRMLLoader;
   gltfloader: GLTFLoader;
 
-  fileName: string = "Menganito";
+  fileName: string = "Roboliga";
   shareLocalCode: string = "";
   shareCode: string = "";
 
@@ -1358,7 +1358,7 @@ export class AppComponent implements AfterViewInit {
     this.cost += (this.numberOfWheels * this.wheelCost) - (this.previousWheelNumber * this.wheelCost)
     
     this.previousDistNumber = this.numberOfDists
-    this.numberOfDists = this.distanceSensorValues.length
+    this.numberOfDists =1;//this.distanceSensorValues.length
     this.distsIterator = Array(this.numberOfDists).fill(0);
     this.cost += (this.numberOfDists * this.distCost) - (this.previousDistNumber * this.distCost)
 
