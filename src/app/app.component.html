@@ -34,12 +34,6 @@
       </td>
       <td colspan="2">
         <h2>Sensores:</h2>
-        <div *ngFor="let item of components">
-          <app-component-checkbox [import]=checkboxImport[item.dictName] [values]=checkboxValues[item.dictName] [customName]="item.defaultName" [dictName]="item.dictName" [type]="item.type" [cost]="item.cost" [name]="item.name" [totalCost]="cost" [budget]="budget" (outputCost)="checkBoxChecked($event)" (component)="addSelectedComponent($event)"></app-component-checkbox>
-        </div>
-        <br>
-
-        <h3>Sensores de distancia: </h3>
         <div *ngFor="let dist of distsIterator; let j = index">
           <app-component-slider [values]=distanceSensorValues[j] [zxmax]=370 [name]="'Distance Sensor'" [number]="j + 1" (component)="addSelectedComponent($event)"></app-component-slider>
         </div>

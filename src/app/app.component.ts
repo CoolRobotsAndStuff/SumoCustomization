@@ -36,8 +36,8 @@ export class AppComponent implements AfterViewInit {
   numberOfWheels = 0;
   wheelsIterator = Array(this.numberOfWheels).fill(0);
 
-  previousDistNumber = 2;
-  numberOfDists = 2;
+  previousDistNumber = 3;
+  numberOfDists = 3;
   distsIterator = Array(this.numberOfDists).fill(0);
 
   cost = this.numberOfWheels * this.wheelCost + this.numberOfDists * this.distCost;
