@@ -37,7 +37,7 @@ export class AppComponent implements AfterViewInit {
   wheelsIterator = Array(this.numberOfWheels).fill(0);
 
   previousDistNumber = 2;
-  numberOfDists = 3;
+  numberOfDists = 2;
   distsIterator = Array(this.numberOfDists).fill(0);
 
   cost = this.numberOfWheels * this.wheelCost + this.numberOfDists * this.distCost;
@@ -1385,7 +1385,6 @@ export class AppComponent implements AfterViewInit {
     for(let component in json){
       let value = json[component]
       if (json[component].name == "Distance Sensor"){
-        console.log("Hola mundo")
         this.distanceSensorValues.push(value)
       }
       else {
