@@ -30,8 +30,8 @@ export class CheckBoxComponent {
 
     check = new Subject<CheckBoxComponent>();
 
-    checked: boolean = true;
-    disabled: boolean = false;
+    checked: boolean = false;
+    disabled: boolean = true;
     collapsed = false;
 
     x: number = 0.0;

@@ -250,7 +250,7 @@ export class AppComponent implements AfterViewInit {
     let model = null;
     
     const geometry = new THREE.BoxGeometry( 0.1, 0.1, 0.1 );
-    const texture = new THREE.TextureLoader().load("./../assets/textures/sensor.png");
+    const texture = new THREE.TextureLoader().load("./assets/textures/sensor.png");
       
     const material_top = new THREE.MeshPhongMaterial( {map: texture} );
     const material_bot = new THREE.MeshPhongMaterial( { color: 0xffffff} );
@@ -1268,6 +1268,7 @@ export class AppComponent implements AfterViewInit {
 
   export_to_json(){
     let customNames = []
+    //Swal.fire('Error', `--"${this.selectedDevices}"--`, 'error');
     //customName check
     for(let k of Object.keys(this.selectedDevices)){
       let device = this.selectedDevices[k]
@@ -1281,12 +1282,12 @@ export class AppComponent implements AfterViewInit {
         return;
       }else{
         if (customNames.indexOf(cn) >= 0){
-          Swal.fire(
+          /* Swal.fire(
             'Name error',
             `"${cn}" has already been specified by another sensor/motor. A non-duplicate name must be specified.`,
             'error'
           )
-          return;
+          return; */
         }else{
           customNames.push(cn)
         }
