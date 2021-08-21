@@ -10,5 +10,5 @@
         <b>{{customName}} </b>
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <app-position-rot [values]=values minPositionY=-200 maxPositionY=-100 minPositionX="{{-maxNumber}}" maxPositionX="{{maxNumber}}" minPositionZ="{{-maxNumber}}" maxPositionZ="{{maxNumber}}" (pos_rot)="updatePosition($event)"></app-position-rot>
+    <app-position-rot [values]=values minPositionY=-150 maxPositionY=200 minPositionX="{{-maxNumber}}" maxPositionX="{{maxNumber}}" minPositionZ="{{-maxNumber}}" maxPositionZ="{{maxNumber}}" (pos_rot)="updatePosition($event)"></app-position-rot>
 </mat-expansion-panel>
