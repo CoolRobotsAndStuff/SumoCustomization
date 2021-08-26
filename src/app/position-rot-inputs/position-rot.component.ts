@@ -34,8 +34,8 @@ export class PositionRotationComponent {
     @Input() minPositionX: number = -370;
     @Input() maxPositionX: number = 370;
 
-    @Input() minPositionZ: number = -370;
-    @Input() maxPositionZ: number = 370;
+    @Input() minPositionZ: number = -400;
+    @Input() maxPositionZ: number = 400;
 
     @Input() positionStep: number = 1;
 

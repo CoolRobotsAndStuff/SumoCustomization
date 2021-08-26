@@ -248,10 +248,13 @@ export class AppComponent implements AfterViewInit {
   createThreeModel(dictName){
     let body = this;
     let model = null;
-    
+   let ruta="./assets/textures/sensor.png";
+    if(dictName=="Distance Sensor 1") 
+    {
+      ruta="./assets/textures/sensor2.png";
+    }
     const geometry = new THREE.BoxGeometry( 0.1, 0.1, 0.1 );
-    const texture = new THREE.TextureLoader().load("./assets/textures/sensor.png");
-      
+    const texture = new THREE.TextureLoader().load(ruta);
     const material_top = new THREE.MeshPhongMaterial( {map: texture} );
     const material_bot = new THREE.MeshPhongMaterial( { color: 0xffffff} );
     const material_side = new THREE.MeshPhongMaterial( { color: 0xffffff} );
@@ -1424,9 +1427,12 @@ export class AppComponent implements AfterViewInit {
   
       reader.onload = (e) => {
         let jsonFile = e.target.result.toString();
-        this.importFromJson(JSON.parse(jsonFile))
+        this.importFromJson(JSON.parse(jsonFile));
+
       };
       reader.readAsText($event.srcElement.files[0]);
+      this.fileName=$event.srcElement.files[0].name.slice(0,-5);
+      $event.srcElement.value=null;
     }
   }
   
