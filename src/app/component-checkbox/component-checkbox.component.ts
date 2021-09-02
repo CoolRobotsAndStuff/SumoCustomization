@@ -42,8 +42,8 @@ export class CheckBoxComponent {
     rz: number = 0;
     a: number = 0;
 
-    min: number = -370;
-    max: number = 370;
+    min: number = -400;
+    max: number = 400;
 
     disable(){
         this.checked = true;

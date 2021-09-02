@@ -35,7 +35,7 @@
       <td colspan="2">
         <h2>Sensores:</h2>
         <div *ngFor="let dist of distsIterator; let j = index">
-          <app-component-slider [values]=distanceSensorValues[j] [zxmax]=370 [name]="'Distance Sensor'" [number]="j + 1" (component)="addSelectedComponent($event)"></app-component-slider>
+          <app-component-slider [values]=distanceSensorValues[j] [zxmax]=400 [name]="'Distance Sensor'" [number]="j + 1" (component)="addSelectedComponent($event)"></app-component-slider>
         </div>
       
     </tr>
